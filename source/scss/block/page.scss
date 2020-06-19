@@ -1,0 +1,21 @@
+.page {
+  padding-top: 140px;
+
+  &__pre-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 2.5px;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 4rem;
+  }
+
+
+}

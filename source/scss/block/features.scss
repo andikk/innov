@@ -1,0 +1,44 @@
+.features {
+
+  @include make-row();
+  justify-content: center;
+
+  &__item {
+    margin-bottom: 2rem;
+    text-align: center;
+    @include make-col-ready();
+    @include make-col(6);
+
+    @include media-breakpoint-up(md) {
+       @include make-col(4);
+      margin-bottom: 3.5rem;
+    }
+
+    transition: 0.4s;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
+
+    @include media-breakpoint-up(md) {
+      font-size: 24px;
+    }
+
+  }
+
+  &__img {
+    height: 70px;
+    margin-bottom: 1rem;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 2rem;
+    }
+  }
+
+}

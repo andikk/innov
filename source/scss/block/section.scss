@@ -1,0 +1,29 @@
+.section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 30px;
+    line-height: 37px;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 5rem;
+    }
+  }
+
+  &--grey {
+    background-color: #f7f7f7;
+  }
+
+  &--first {
+    margin-top: 68px;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 97px;
+    }
+  }
+}

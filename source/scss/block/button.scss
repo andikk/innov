@@ -1,0 +1,15 @@
+.button {
+  border: none;
+  border-radius: 4px;
+
+  &--search {
+    background-color: transparent;
+    color: #626262;
+    border: 1px solid #d5d5d5;
+    transition: 0.4s;
+    &:hover {
+      color: black;
+      background-color: #d5d5d5;
+    }
+  }
+}

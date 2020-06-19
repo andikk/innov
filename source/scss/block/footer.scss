@@ -1,0 +1,42 @@
+.footer {
+  padding: 2rem;
+  background-color: #111111;
+  color: white;
+
+  @include media-breakpoint-up(md) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__copyright {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 600;
+  }
+
+  &__menu-list {
+    @include media-breakpoint-up(md) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    list-style: none;
+    padding: 0;
+
+    & li {
+      margin-right: 1rem;
+    }
+  }
+
+  &__link {
+    color: white;
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 600;
+
+    &:hover {
+      color: white;
+    }
+  }
+}

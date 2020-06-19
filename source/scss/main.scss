@@ -1,0 +1,100 @@
+//присвоили значения переменным бутсрапа
+$enable-responsive-font-sizes: true;
+$blue: #035eaf;
+$primary-color: #000000;
+$secondary-color: #bbbbbb;
+$breadcrumb-divider: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxwYXRoIGQ9Ik0yLjUgMEwxIDEuNSAzLjUgNCAxIDYuNSAyLjUgOGw0LTQtNC00eiIgZmlsbD0iY3VycmVudENvbG9yIi8+PC9zdmc+);
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+@import "../css/animate.min.css";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "block/section";
+@import "block/text";
+@import "block/navigation";
+@import "block/button";
+@import "block/paralax";
+@import "block/hello";
+@import "block/features";
+@import "block/contacts";
+@import "block/footer";
+@import "block/page";
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  min-height: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.2);
+
+  @include media-breakpoint-up(md) {
+    min-height: 100px;
+  }
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  margin-right: 0.3rem;
+  margin-bottom: 0.1rem;
+
+  &--no-margin {
+    margin-right: 0;
+  }
+}
+
+a[href$=".pdf"]::before,
+a[href$=".doc"]::before,
+a[href$=".zip"]::before {
+  width: 19px;
+  height: 19px;
+  content: "";
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 5px;
+  background-repeat: no-repeat;
+  background-color: white;
+  border-radius: 3px;
+  padding: 11px;
+  background-position: center;
+}
+
+a[href$=".pdf"]::before {
+  background-image: url("../img/document-file-pdf.svg");
+}
+
+a[href$=".doc"]::before {
+  background-image: url("../img/file-word.svg");
+}
+
+a[href$=".docx"]::before {
+  background-image: url("../img/file-word.svg");
+}
+
+a[href$=".zip"]::before {
+  background-image: url("../img/file-zip.svg");
+}

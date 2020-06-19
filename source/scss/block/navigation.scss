@@ -1,0 +1,141 @@
+.navigation {
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+
+  @include media-breakpoint-up(md) {
+    padding-left: 15px;
+    padding-right: 15px;
+    flex-direction: row;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+  }
+
+  &__logo img {
+    height: 45px;
+
+    @include media-breakpoint-up(md) {
+      height: 75px;
+    }
+  }
+
+  &__toggler {
+    display: block;
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+    background-color: transparent;
+    border: 1px solid $primary-color;
+    border-radius: 3px;
+    z-index: 10;
+
+    &-bar1,
+    &-bar2,
+    &-bar3 {
+      display: block;
+      width: 35px;
+      height: 5px;
+      background-color: $primary-color;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+
+    .js-change &-bar1 {
+      transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    .js-change &-bar2 {
+      opacity: 0;
+    }
+
+    .js-change &-bar3 {
+      transform: rotate(45deg) translate(-8px, -8px);
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 6px;
+    max-height: 0;
+    overflow-y: hidden;
+    margin-bottom: 0;
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0;
+      margin-top: 0;
+      max-height: 1000px;
+      margin-bottom: 0;
+    }
+
+    transition: all 0.7s;
+
+    &.opened {
+      margin-top: 0;
+      max-height: 1000px;
+      margin-bottom: 6px;
+    }
+  }
+
+  &__link {
+    color: $primary-color;
+    display: block;
+    width: 100%;
+
+    @include media-breakpoint-up(md) {
+      text-align: center;
+    }
+  }
+
+  &__item {
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 1 1 auto;
+      text-align: center;
+      align-items: center;
+      padding: 0;
+    }
+  }
+
+  &__search-form {
+    padding-top: 4px;
+    padding-left: 8px;
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+      align-items: center;
+      padding-right: 8px;
+    }
+  }
+
+  &__input {
+    appearance: none;
+    border-radius: 4px;
+    padding-left: 4px;
+    border: 1px solid #D5D5D5;
+
+    @include media-breakpoint-up(md) {
+      margin-right: 4px;
+    }
+  }
+}

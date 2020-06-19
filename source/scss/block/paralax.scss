@@ -1,0 +1,58 @@
+.parallax {
+  position: relative;
+
+  background-size: cover, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center;
+  text-align: left;
+  height: 200px;
+
+  @include media-breakpoint-up(md) {
+    height: 100vh;
+    background-attachment: fixed;
+  }
+
+  &__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include media-breakpoint-up(md) {
+      padding-right: 10rem;
+    }
+
+  }
+
+  &__pre-title {
+    color: #ffffff;
+
+    @include media-breakpoint-up(md) {
+      font-size: 26px;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  &__title {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.5rem;
+
+    @include media-breakpoint-up(md) {
+      font-size: 72px;
+      line-height: 1.17;
+    }
+
+  }
+
+  &__subtitle {
+    color: #ffffff;
+    @include media-breakpoint-up(md) {
+      font-size: 24px;
+      line-height: 1.5;
+      padding: 0 0 30px 0;
+    }
+  }
+
+
+}
