@@ -9,6 +9,10 @@
     @include media-breakpoint-up(md) {
       order: 1;
     }
+
+    & p {
+
+    }
   }
 
   &__image-container {

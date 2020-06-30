@@ -1,6 +1,7 @@
 .section {
   padding-top: 3rem;
   padding-bottom: 3rem;
+  outline: none;
 
 
   &__title {
@@ -10,6 +11,7 @@
     line-height: 37px;
     font-weight: 600;
     margin-bottom: 3rem;
+
     @include media-breakpoint-up(md) {
       margin-bottom: 5rem;
     }
@@ -26,4 +28,5 @@
       margin-top: 97px;
     }
   }
+
 }

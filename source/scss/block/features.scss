@@ -30,15 +30,18 @@
     @include media-breakpoint-up(md) {
       font-size: 24px;
     }
-
   }
 
   &__img {
     height: 70px;
     margin-bottom: 1rem;
+
     @include media-breakpoint-up(md) {
       margin-bottom: 2rem;
     }
   }
 
+  & a {
+    color: black;
+  }
 }

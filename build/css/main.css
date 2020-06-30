@@ -1,4 +1,5 @@
 @import url(../css/animate.min.css);
+@import url(../css/jquery.fancybox.min.css);
 * {
   font-family: "Roboto", sans-serif; }
 
@@ -8283,7 +8284,8 @@ a.text-dark:hover, a.text-dark:focus {
 
 .section {
   padding-top: 3rem;
-  padding-bottom: 3rem; }
+  padding-bottom: 3rem;
+  outline: none; }
   .section__title {
     text-transform: uppercase;
     text-align: center;
@@ -8592,6 +8594,8 @@ a.text-dark:hover, a.text-dark:focus {
     @media (min-width: 768px) {
       .features__img {
         margin-bottom: 2rem; } }
+  .features a {
+    color: black; }
 
 .contacts {
   position: relative; }
@@ -8736,3 +8740,19 @@ a[href$=".docx"]::before {
 
 a[href$=".zip"]::before {
   background-image: url("../img/file-zip.svg"); }
+
+.content p,
+li {
+  font-size: 20px;
+  line-height: 31px;
+  font-weight: 300;
+  font-style: normal; }
+
+.content__image {
+  max-width: 460px;
+  float: right;
+  padding-bottom: 1rem;
+  padding-left: 1rem; }
+  .content__image img {
+    width: 100%;
+    height: auto; }

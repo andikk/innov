@@ -10,6 +10,7 @@ $breadcrumb-divider: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3d
 }
 
 @import "../css/animate.min.css";
+@import "../css/jquery.fancybox.min.css";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "block/section";
 @import "block/text";
@@ -97,4 +98,24 @@ a[href$=".docx"]::before {
 
 a[href$=".zip"]::before {
   background-image: url("../img/file-zip.svg");
+}
+
+.content p,
+li {
+  font-size: 20px;
+  line-height: 31px;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.content__image {
+  max-width: 460px;
+  float: right;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+
+  & img {
+    width: 100%;
+    height: auto;
+  }
 }

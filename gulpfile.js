@@ -96,6 +96,7 @@ gulp.task("js", function() {
     "source/js/bundle/bootstrap.min.js",
     "source/js/bundle/popper.min.js",
     "source/js/bundle/wow.min.js",
+    "source/js/bundle/jquery.fancybox.min.js",
     "source/js/bundle/custom.js",
   ])
     .pipe(concat("bundle.js"))
