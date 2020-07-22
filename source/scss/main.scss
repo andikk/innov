@@ -112,7 +112,10 @@ li {
   max-width: 460px;
   float: right;
   padding-bottom: 1rem;
-  padding-left: 1rem;
+
+  @include media-breakpoint-up(md) {
+    padding-left: 1rem;
+  }
 
   & img {
     width: 100%;

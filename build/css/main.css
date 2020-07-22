@@ -8567,20 +8567,20 @@ a.text-dark:hover, a.text-dark:focus {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
-    max-width: 50%;
-    -webkit-transition: 0.4s;
-    transition: 0.4s; }
+    max-width: 50%; }
     @media (min-width: 768px) {
       .features__item {
         -webkit-box-flex: 0;
             -ms-flex: 0 0 33.33333%;
                 flex: 0 0 33.33333%;
         max-width: 33.33333%;
-        margin-bottom: 3.5rem; } }
-    .features__item:hover {
-      cursor: pointer;
-      -webkit-transform: scale(1.2);
-              transform: scale(1.2); }
+        margin-bottom: 3.5rem;
+        -webkit-transition: 0.4s;
+        transition: 0.4s; }
+        .features__item:hover {
+          cursor: pointer;
+          -webkit-transform: scale(1.2);
+                  transform: scale(1.2); } }
   .features__text {
     font-size: 18px;
     line-height: 28px;
@@ -8751,8 +8751,10 @@ li {
 .content__image {
   max-width: 460px;
   float: right;
-  padding-bottom: 1rem;
-  padding-left: 1rem; }
+  padding-bottom: 1rem; }
+  @media (min-width: 768px) {
+    .content__image {
+      padding-left: 1rem; } }
   .content__image img {
     width: 100%;
     height: auto; }

@@ -6,20 +6,20 @@
   &__item {
     margin-bottom: 2rem;
     text-align: center;
+
     @include make-col-ready();
     @include make-col(6);
 
     @include media-breakpoint-up(md) {
-       @include make-col(4);
+      @include make-col(4);
       margin-bottom: 3.5rem;
-    }
+      transition: 0.4s;
 
-    transition: 0.4s;
-    &:hover {
-      cursor: pointer;
-      transform: scale(1.2);
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+      }
     }
-
   }
 
   &__text {
