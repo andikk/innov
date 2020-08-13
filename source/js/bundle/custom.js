@@ -10,8 +10,6 @@
      $('.js-menu-btn').toggleClass('js-change'); // Меняем икноку на кнопке
    });
 
-
-
    $('a[href*="#"]')
      // Remove links that don't actually link to anything
      .not('[href="#"]')
@@ -32,22 +30,23 @@
            event.preventDefault();
            $('html, body').animate({
              scrollTop: target.offset().top - 60
-           }, 1000, function() {
-             // Callback after animation
-             // Must change focus!
-             // var $target = $(target);
-             // $target.focus();
-             // if ($target.is(":focus")) { // Checking if the target was focused
-             //   return false;
-             // } else {
-             //   $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-             //   $target.focus(); // Set focus again
-             // };
-           });
+           }, 1000);
          }
        }
      });
 
+// direct browser to top right away
+   if (window.location.hash)  scroll(0,0);
+// takes care of some browsers issue
+   setTimeout(function(){scroll(0,0);},1);
+
+// if we have anchor on the url (calling from other page)
+     if(window.location.hash){
+       // smooth scroll to the anchor id
+       $('html,body').animate({
+         scrollTop:$(window.location.hash).offset().top - 60 + 'px'
+       },1000,'swing');
+     }
 
    new WOW().init();
 
